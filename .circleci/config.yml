@@ -3,7 +3,7 @@ jobs:
   build: 
     docker: 
       - image: circleci/golang:1.8 
-    working_directory: /go/src/github.com/tremes/managed-service-broker
+    working_directory: /go/src/github.com/integr8ly/managed-service-broker
 
     steps:
       - checkout 
