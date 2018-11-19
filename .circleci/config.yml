@@ -9,5 +9,11 @@ jobs:
       - checkout 
       - run: make build_binary
     
-    docker_push:
+  docker_push:
+    docker:
+      # Node 10 LTS
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - setup_remote_docker
       - run: "./scripts/docker_push.sh"
