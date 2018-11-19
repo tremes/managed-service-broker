@@ -7,22 +7,7 @@ jobs:
 
     steps:
       - checkout 
-      - run: make build_binary
-    
-  docker_push:
-    docker:
-      # Node 10 LTS
-      - image: circleci/node:10
-    steps:
-      - checkout
       - setup_remote_docker
+      - run: make build_binary
       - run: ./scripts/docker_build_and_push.sh
-
-workflows:
-  version: 2
-  build-and-push-docker-image:
-    jobs:
-    - build
-    - docker_push:
-        requires: 
-          - build
+    
