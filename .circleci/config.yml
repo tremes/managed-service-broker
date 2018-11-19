@@ -13,6 +13,8 @@ jobs:
     docker:
       # Node 10 LTS
       - image: circleci/node:10
+    working_directory: /go/src/github.com/integr8ly/managed-service-broker
+
     steps:
       - checkout
       - setup_remote_docker
