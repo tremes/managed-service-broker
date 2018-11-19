@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - run: ./scripts/docker_push.sh
+      - run: ./scripts/docker_build_and_push.sh
 
 workflows:
   version: 2
