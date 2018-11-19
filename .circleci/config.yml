@@ -20,9 +20,9 @@ jobs:
 
 workflows:
   version: 2
-  workflow:
+  build-and-push-docker-image:
     jobs:
     - build
     - docker_push:
-      requires: 
-        - build
+        requires: 
+          - build
